@@ -200,7 +200,7 @@ $(function() {
 	$( "#AGROVOCfinder" ).autocomplete({
 		source: function(request, response) {
 		$.ajax({
-			url : 'http://hive.renci.org:8080/ac?cv=agrovoc&',
+			url : 'http://hive.cci.drexel.edu:8080/ac?cv=agrovoc&',
 			dataType: 'jsonp',
 			data: { term: request.term },
 			success: function(data) {
@@ -238,7 +238,7 @@ $(function() {
 	$( "#ITISfinder" ).autocomplete({
 		source: function(request, response) {
 		$.ajax({
-			url : 'http://hive.renci.org:8080/ac?cv=itis&',
+			url : 'http://hive.cci.drexel.edu:8080/ac?cv=itis&',
 			dataType: 'jsonp',
 			data: { term: request.term },
 			success: function(data) {
@@ -276,7 +276,7 @@ $(function() {
 	$( "#LCSHfinder" ).autocomplete({
 		source: function(request, response) {
 		$.ajax({
-			url : 'http://hive.renci.org:8080/ac?cv=lcsh&',
+			url : 'http://hive.cci.drexel.edu:8080/ac?cv=lcsh&',
 			dataType: 'jsonp',
 			data: { term: request.term },
 			success: function(data) {
@@ -314,7 +314,7 @@ $(function() {
 	$( "#MESHfinder" ).autocomplete({
 		source: function(request, response) {
 		$.ajax({
-			url : 'http://hive.renci.org:8080/ac?cv=mesh&',
+			url : 'http://hive.cci.drexel.edu:8080/ac?cv=mesh&',
 			dataType: 'jsonp',
 			data: { term: request.term },
 			success: function(data) {
@@ -352,7 +352,7 @@ $(function() {
 	$( "#TGNfinder" ).autocomplete({
 		source: function(request, response) {
 		$.ajax({
-			url : 'http://hive.renci.org:8080/ac?cv=tgn&',
+			url : 'http://hive.cci.drexel.edu:8080/ac?cv=tgn&',
 			dataType: 'jsonp',
 			data: { term: request.term },
 			success: function(data) {
