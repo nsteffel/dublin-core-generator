@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>News</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<meta name="description" content="The latest news and updates on dublincoregenerator.com." />
+<meta name="google-site-verification" content="D-SyuAiarK1zPhnqWgDGWRTkeuD7AgfOJ396-G9wlds" />
+<!--Oh look, Dublin Core code!-->
+<link rel="DC.Title" href="www.dublincoregenerator.com" />
+<meta name="DC.Creator" content="Nick Steffel" />
+<meta name="DC.Subject" scheme="DCTERMS.LCSH" content="Dublin Core" />
+<meta name="DC.Description" content="dublincoregenerator.com is a free and easy to use set of online tools for generating XML or HTML Dublin Core metadata code." />
+<meta name="DCTERMS.Created" scheme="DCTERMS.W3CTDF" content="2010-12-04" />
+<meta name="DCTERMS.Modified" scheme="DCTERMS.W3CTDF" content="2011-03-24" />
+<meta name="DC.Type" scheme="DCTERMS.DCMIType" content="InteractiveResource" />
+<meta name="DC.Format" scheme="DCTERMS.IMT" content="application/xhtml+xml" />
+<link rel="DC.Identifier" href="http://www.dublincoregenerator.com" />
+<meta name="DC.Language" content="English" />
+<meta name="DC.Language" scheme="DCTERMS.ISO639-3" content="eng" />
+<link rel="DC.Rights" href="http://creativecommons.org/licenses/by-nc-nd/3.0/" />
+<link rel="stylesheet" type="text/css" href="css/dcstyle.css"></link>
+<link rel="icon" href="/img/favicon.ico" type="image/x-icon"></link>
+<script type="text/javascript" src="js/analytics.js"></script>
+</head>
+<body class="indexbody">
+<div class="container">
+<div class="header">
+dublincoregenerator.com - a better dublin core generator
+</div>
+<div class="menu">
+<span class="inactivemenu" style="margin-left:10px"><a href="index.html">Main Page</a></span><span>&nbsp;&nbsp;</span><span class="inactivemenu"><a href="generator_nq.html">Simple Generator</a></span><span>&nbsp;&nbsp;</span><span class="inactivemenu"><a href="generator.html">Advanced Generator</a></span><span>&nbsp;&nbsp;</span><span class="inactivemenu"><a href="about.html">About</a></span><span>&nbsp;&nbsp;</span><span class="activemenu"><a href="news.html">News</a></span><span>&nbsp;&nbsp;</span><span class="inactivemenu"><a href="contribute.html">Contribute</a></span>
+</div>
+<div class="page">
+<div class="centerpage">
+<div class="centerbox">
+<div class="boxheader">News</div>
+<div class="boxtext">
+<p>03/28/2011 - News and updates can now be found on <a href="http://www.dublincoregenerator.com/blog/">our slick Wordpress-driven blog</a>.</p>
+<p>03/24/2011 - These days it's hardly worth looking at a website unless it has slick rounded corners everywhere.  They just scream Web 2.0, don't they?  Well now we have them!  Rejoice!  I also hope to roll out a "Save Generated Dublin Core as File" feature this week.  Everything works, I just want to test it a bit more first.</p>
+<p>02/26/2011 - If you're the security conscious type, I've added the ability to use this site over an encrypted connection.  Just go to <a href="https://www.dublincoregenerator.com" target="blank">https://www.dublincoregenerator.com</a> (note the https://) and you'll be able to generate metadata with the added bonus of 256-bit encrypted privacy.</a>
+<p>02/21/2011 - I've added what will hopefully be the first of a few minor validation features to the Advanced Generator.  For the Coverage element, it will now restrict you to only the valid encoding schemes for Coverage/Spatial/Temporal depending on what you select.  I'm hoping to add some additional features along these lines (e.g.: if you pick DCMI Type, checking to make sure you actually enter a valid DCMI Type).  I've made a handful of other minor updates here and there to the text, style (mainly to get it looking decent in older versions of Internet Explorer), and formatting.</p>
+<p>02/12/2011 - Huzzah!  There are now separate Simple and Advanced Generators!  The <a href="generator_nq.html">Simple Generator</a> is just the basic 15 Dublin Core elements without any of the qualifiers or encoding schemes.  The <a href="generator.html">Advanced Generator</a> is the generator that the site has had up until now with all of the valid qualifiers and encoding schemes included.  I'll be curious to see which gets more use.</p>
+<p>02/10/2011 - I've created a Twitter account for news and updates specific to this website.  The username is <a href="http://twitter.com/dublincoregen" target="blank">dublincoregen</a>.  If you're curious about the excrutiating minutae of my own life, feel free to still follow me personally at <a href="http://twitter.com/nicksteffel" target="blank">nicksteffel</a>.</p>
+<p>02/09/2011 - I added a quick little thing that's been on my list for awhile today: a <a href="http://en.wikipedia.org/wiki/Favicon" target="blank">favicon</a>!  It's nothing fancy, but hopefully it'll make the site a little easier to spot in bookmark lists or tabbed browsers.</p>
+<p>02/06/2011 - Just as an update, I have a version of the non-qualified Dublin Core generator working.  It will be another week or two until it makes its way online since I'd like to redesign the site itself a little bit to better accomodate it.</p>
+<p>01/25/2011 - I made a few minor changes to clean up the site's code earlier today.  I also did something I probably should have done a long time ago: created a block of Dublin Core code for this site...using my site!  It was uniquely satisfying.</p>
+<p>01/24/2011 - I had not noticed until today that my update from 12/24 had actually broken the tool for Internet Explorer users -- copies of elements were no longer appearing in the generated code.  I have revised the backend code that handles this and it should now work across all browsers.  Sorry about that!</p>
+<p>01/23/2011 - Cheers to <a href="http://www.makxdekkers.com/" target="blank">Makx Dekkers</a>, who just so happens to be the <a href="http://www.dublincore.org/about/executive/" target="blank">Managing Director and CEO</a> of the Dublin Core Metadata Initative, for pointing out a few issues with how I was generating the HTML and XHTML code.  Elements that refer to a URL should now generate as a &lt;link&gt; tag instead of a &lt;meta&gt; tag.  Qualified DC elements will now be named DCTERMS.&lt;insert name&gt; instead of DC.&lt;element name&gt;.&lt;qualified element refinement&gt;.  Similarly, vocabulary encoding schemes will now appear as DCTERMS.&lt;scheme&gt;.  I also made a few minor corrections that I noticed while I was tinkering around.</p>
+<p>01/16/2011 - Cheers to visitor <a href="http://catalogablog.blogspot.com/" target="blank">David Bigwood</a> for emailing me about the tool's HTML capabilities.  He helped point out that the DC-HTML guidelines actually provide two sets of sub-guidelines: one for plain HTML and one for XHTML.  I have updated the tool to generate either HTML or XHTML and also added some additional output options similar to those available for generating XML.  I would be <strong>extremely</strong> curious to hear whether people are still actively using DC-HTML often since, admittedly, I added it mostly as an afterthought and have not planned to do a lot of developing for it.  Drop me a line and let me know.</p>
+<p>01/10/2011 - Cheers to visitor <a href="http://www.kidstrythisathome.com/" target="blank">Samuel Spencer</a> for pointing out that the closing container tag was incorrectly generating as &lt;\metadata&gt;.  This is now fixed.</p>
+<p>01/08/2011 - The next improvement in the works is a way to toggle the generator between the standard 15 Dublin Core elements and the much larger set of Qualified Dublin Core elements.  The current generator will become the Qualified Dublin Core generator and I'll be creating a second much simpler one with just the core 15 elements and no refinements and/or encoding schemes.  I'm hoping it won't take very long to do since everything's (obviously) in place, I just need to perform a little surgery to whittle it down while making sure everything still works.</p>
+<p>01/01/2011 - Happy New Year!  I have finished adding the additional qualified elements!  I also added a "license" refinement for the "rights" element which I had overlooked.  Additionally, I added the <a href="http://www.nlm.nih.gov/mesh/meshhome.html" target="blank">Medical Subject Headings</a> and <a href="http://www.nlm.nih.gov/class/" target="blank">National Library of Medicine Classification</a> as valid encoding schemes for "subject" along with links in the left-hand resources box.  I've also snuck in a few minor updates to the page layout over the past week.</p>
+<p>12/24/2010 - Merry Christmas!  I've made a backend update I've been wanting to do ever since this tool went live.  Previously the tool would only recognize the first ten copies of a given element.  Now it should be able to recognize as many as you can throw at it (well, there is a JavaScript memory limit at around 4.2 billion...so try to keep it under that).  I also fixed a bug where additional copies of the "Description" element didn't have the nice big input box for entering information.</p>
+<p>12/11/2010 - Added a link to Creative Commons to the resources section.  Also started laying the groundwork for adding the handful of special qualified Dublin Core elements (Provenance, AccrualPolicy, etc.) which I will hopefully have in working order within a week or so.</p>
+<p>12/7/2010 - Made several minor changes to how the site will appear for people using Internet Explorer.  I had tried to use the <a href="http://www.xs4all.nl/~peterned/csshover.html" target="blank">CSSHover</a> workaround to give IE users some cool effects on the form fields, but it was creating some odd issues with using the drop-down menus.  I also made a CSS tweak for IE users so the checkboxes don't look ugly.</p>
+<p>12/4/2010 - The site goes live!  Thanks to <a href="http://www.6sync.com" target="blank">6sync</a> for the awesome reasonably priced hosting.</p>
+</div>
+</div>
+</div>
+&nbsp;
+<div class="lowerbox">
+<div style="font-size:10px;margin-left:10px">
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png" /></a> The content on this site is released under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

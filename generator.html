@@ -1,0 +1,609 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>The Advanced Dublin Core Generator!</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <meta name="description" content="The Advanced Generator, with support for all valid Dublin Core qualifiers and encoding schemes." />
+    <meta name="google-site-verification" content="D-SyuAiarK1zPhnqWgDGWRTkeuD7AgfOJ396-G9wlds" />
+
+	<!--Oh look, Dublin Core code!-->
+	<link rel="DC.Title" href="www.dublincoregenerator.com" />
+	<meta name="DC.Creator" content="Nick Steffel" />
+	<meta name="DC.Subject" scheme="DCTERMS.LCSH" content="Dublin Core" />
+	<meta name="DC.Description" content="dublincoregenerator.com is a free and easy to use set of online tools for generating XML or HTML Dublin Core metadata code." />
+	<meta name="DCTERMS.Created" scheme="DCTERMS.W3CTDF" content="2010-12-04" />
+	<meta name="DCTERMS.Modified" scheme="DCTERMS.W3CTDF" content="2012-10-16" />
+	<meta name="DC.Type" scheme="DCTERMS.DCMIType" content="InteractiveResource" />
+	<meta name="DC.Format" scheme="DCTERMS.IMT" content="application/xhtml+xml" />
+	<link rel="DC.Identifier" href="http://www.dublincoregenerator.com" />
+	<meta name="DC.Language" content="English" />
+	<meta name="DC.Language" scheme="DCTERMS.ISO639-3" content="eng" />
+	<link rel="DC.Rights" href="http://creativecommons.org/licenses/by-nc/3.0/" />
+
+	<link rel="stylesheet" type="text/css" href="css/dcstyle.css"></link>
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.8.17.custom.css"></link>
+	<link rel="icon" href="/img/favicon.ico" type="image/x-icon"></link>
+	
+	<script type="text/javascript" src="js/generator.js"></script>
+	<script type="text/javascript" src="js/interface.js"></script>
+	<script type="text/javascript" src="js/analytics.js"></script>
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.anirows.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="js/vocabsources.js"></script>
+
+</head>
+<body class="indexbody">
+  <div class="container">
+    <div class="header">dublincoregenerator.com - a better dublin core generator</div>
+    <ul id="newmenu">
+      <li><a href="index.html" title="Main Page">Main Page</a></li>
+	  <li><a href="generator_nq.html" title="Simple Dublin Core Generator">Simple Generator</a></li>
+	  <li><a href="generator.html" title="Advanced Dublin Core Generator">Advanced Generator</a></li>
+	  <li><a href="generator_zc.html" title="xZINECOREx Generator">xZINECOREx Generator</a></li>
+	  <li><a href="about.html" title="About">About</a></li>
+	  <li><a href="contribute.html" title="Contribute">Contribute</a></li>
+    </ul>
+	<div>&nbsp;</div>
+        <div class="page">
+        <div class="centerpage">
+        <div class="centerbox">
+          <div class="boxheader">Directions</div>
+          <div class="boxtext">
+            <ul class="directionslist">
+			<li>Fill in the fields below and click on "Generate Code!" to convert your input into fully formed Dublin Core metadata code. Additional options for the format of the output code are available below.</li>
+			<li>If you need additional copies of a given field, click the plus sign to the upper-right of the tag's name to add an additional copy of it.</li>
+			<li>Click the minus sign to delete any unneeded additional copies -- don't worry about removing tags you don't intend to use, the system will ignore any empty tags (and you can't delete the first row anyway).</li>
+			<li>If you are unsure how a specific tag works, you can click the question mark next to the tag's name to see the tag's entry in Diane Hilmann's wonderful guide "Using Dublin Core -- The Elements."</li>
+			<li>To use a more specific term from the qualified vocabulary, use the drop down menu for the element to select it. To specify an encoding scheme, use the drop down menu to the right of the element to select a valid option.</li>
+			<li>Use the links on the left side of the page to view helpful information on the different vocabularies and, for many, look up terms directly.</li>
+			<li>If you do not need to see options for encoding schemes or the more advanced qualified elements of Dublin Core, use the Simple Generator located <a href="generator_nq.html">here</a>.</li>
+            </ul> 
+          </div>
+        </div>
+        </div>
+        <div>&nbsp;</div>
+		<div class="leftpage">
+		<div class="leftbox">
+		<div class="boxheader">Resources</div>
+		<div class="boxtext">
+		  <span class="resourceheader">Subject:</span><br/>
+		    <a href="http://www.getty.edu/research/conducting_research/vocabularies/aat/" target="blank">AAT</a><br/>
+		    <a href="#" id="openAGROVOC">AGROVOC</a><br/>
+		    <a href="#" id="openITIS">ITIS</a><br/>
+		    <a href="#" id="openLCSH">LCSH</a><br/>
+		    <a href="#" id="openMESH">MESH</a><br/>
+		    <a href="http://www.nlm.nih.gov/class/" target="blank">NLM</a><br/>
+		    <a href="http://www.loc.gov/pictures/collection/tgm/" target="blank">TGM</a><br/>
+		    <a href="#" id="openTGN">TGN</a>
+		<div class="divider"></div>
+		  <span class="resourceheader">Date:</span><br/>
+		  <a href="#" id="openDCMIPeriod">DCMI Period</a><br/>
+		  <a href="http://www.w3.org/TR/NOTE-datetime" target="blank" id="openW3CTDF">W3-CDTF</a>
+		<div class="divider"></div>
+		  <span class="resourceheader">Type:</span><br/>
+		  <a href="#" id="openDCMIType">DCMI Type</a>
+		<div class="divider"></div>
+		  <span class="resourceheader">Format:</span><br/>
+		  <a href="#" id="openIMTType">IMT</a>
+		<div class="divider"></div>
+		  <span class="resourceheader">Language:</span><br/>
+		  <a href="#" id="openISO6392">ISO 639-2 Codes</a><br/>
+		  <a href="#" id="openISO6393">ISO 639-3 Codes</a><br/>
+		<div class="divider"></div>
+		  <span class="resourceheader">Coverage:</span><br/>
+		  <a href="#" id="openDCMIBox">DCMI Box</a><br/>
+		  <a href="#" id="openISO3166">ISO 3166 Codes</a><br/>
+		  <a href="#" id="openDCMIPeriod2">DCMI Period</a><br/>
+		  <a href="#" id="openDCMIPoint">DCMI Point</a><br/>
+		  <a href="#" id="openTGN2">TGN</a><br/>
+		  <a href="http://www.w3.org/TR/NOTE-datetime" target="blank" id="openW3CTDF2">W3-CDTF</a><br/>
+		</div>
+		</div>
+		</div>
+		<div class="rightpage">
+		<div class="rightbox">
+		<div class="boxheader">Input</div>
+		<div class="boxtext">
+		<br/>
+		  <table id="titleTable" class="defaulttable">
+		    <tr>
+		      <td class="titlerow">Title<a href="http://dublincore.org/documents/usageguide/elements.shtml#title" target="blank" class="superscript">?</a></td>
+			  <td align="right"><a href="#creator" class="addremovebutton" onclick="addRowToTable('title');" tabindex="-1">[+]</a><a href="#creator" class="addremovebutton" onclick="removeRowFromTable('titleTable');" tabindex="-1">[-]</a></td>
+		    </tr>
+		    <tr>
+		      <td><select name="titleType" class="idleField"><option id="notitle">Title</option><option id="alternativetitle">Alternative Title</option></select></td>
+		      <td><input type="text" name="titleRow" size="40" class="idleField" /></td>
+		    </tr>
+		  </table>
+		  
+		  <table id="creatorTable" class="defaulttable">
+		    <tr>
+		      <td class="titlerow">Creator<a href="http://dublincore.org/documents/usageguide/elements.shtml#creator" target="blank" class="superscript" tabindex="-1">?</a></td>
+		      <td align="right"><a href="#creator" class="addremovebutton" onclick="addRowToTable('creator');" tabindex="-1">[+]</a><a href="#creator" class="addremovebutton" onclick="removeRowFromTable('creatorTable');" tabindex="-1">[-]</a></td>
+		    </tr>
+		    <tr>
+		      <td colspan="2"><input type="text" name="creatorRow" size="40" class="idleField"  /></td>
+		    </tr>
+		  </table>
+		  
+		  <table id="subjectTable" class="defaulttable">
+		    <tr>
+		      <td class="titlerow">Subject<a href="http://dublincore.org/documents/usageguide/elements.shtml#subject" target="blank" class="superscript" tabindex="-1">?</a></td>
+			  <td align="right"><a href="#subject" class="addremovebutton" onclick="addRowToTable('subject');" tabindex="-1">[+]</a><a href="#subject" class="addremovebutton" onclick="removeRowFromTable('subjectTable');" tabindex="-1">[-]</a></td>
+		    </tr>
+		    <tr>
+		      <td><input type="text" name="subjectRow" id="subjectRow1" size="40" class="idleField" /></td>
+		      <td><select name="subjectType" id="subjectType1" class="idleField"><option></option><option>AAT</option><option>AGROVOC</option><option>DDC</option><option>ITIS</option><option>LCC</option><option>LCSH</option><option>MESH</option><option>NLM</option><option>TGM</option><option>TGN</option><option>UDC</option></select></td>
+		    </tr>
+		  </table>
+		  
+		  <table id="descriptionTable" class="defaulttable">
+		    <tr>
+		      <td class="titlerow">Description<a href="http://dublincore.org/documents/usageguide/elements.shtml#description" target="blank" class="superscript" tabindex="-1">?</a></td>
+			  <td align="right"><a href="#description" class="addremovebutton" onclick="addRowToTable('description');" tabindex="-1">[+]</a><a href="#description" class="addremovebutton" onclick="removeRowFromTable('descriptionTable');" tabindex="-1">[-]</a></td>
+		    </tr>
+		    <tr>
+		      <td valign="top"><select name="descriptionType" class="idleField"><option>Description</option><option>Table of Contents</option><option>Abstract</option></select></td>
+		      <td><textarea rows="5" cols="50" name="descriptionRow" class="idleField"></textarea></td>
+		    </tr>
+		  </table>
+		  
+		  <table id="publisherTable" class="defaulttable">
+		    <tr>
+		      <td class="titlerow">Publisher<a href="http://dublincore.org/documents/usageguide/elements.shtml#publisher" target="blank" class="superscript" tabindex="-1">?</a></td>
+			  <td align="right"><a href="#publisher" class="addremovebutton" onclick="addRowToTable('publisher');" tabindex="-1">[+]</a><a href="#publisher" class="addremovebutton" onclick="removeRowFromTable('publisherTable');" tabindex="-1">[-]</a></td>
+		    </tr>
+		    <tr>
+		      <td colspan="2"><input type="text" name="publisherRow" id="publisherRow1" size="40" class="idleField" /></td>
+		    </tr>
+		  </table>
+		  
+		  <table id="contributorTable" class="defaulttable">
+		    <tr>
+		      <td class="titlerow">Contributor<a href="http://dublincore.org/documents/usageguide/elements.shtml#contributor" target="blank" class="superscript" tabindex="-1">?</a></td>
+			  <td align="right"><a href="#contributor" class="addremovebutton" onclick="addRowToTable('contributor');" tabindex="-1">[+]</a><a href="#contributor" class="addremovebutton" onclick="removeRowFromTable('contributorTable');" tabindex="-1">[-]</a></td>
+		    </tr>
+		    <tr>
+		      <td colspan="2"><input type="text" name="contributorRow" id="contributorRow1" class="idleField" size="40" /></td>
+		    </tr>
+		  </table>
+		  
+		  <table id="dateTable" class="defaulttable">
+		    <tr>
+		      <td colspan="2" class="titlerow">Date<a href="http://dublincore.org/documents/usageguide/elements.shtml#date" target="blank" class="superscript" tabindex="-1">?</a></td>
+			  <td align="right"><a href="#date" class="addremovebutton" onclick="addRowToTable('date');" tabindex="-1">[+]</a><a href="#date" class="addremovebutton" onclick="removeRowFromTable('dateTable');" tabindex="-1">[-]</a></td>
+		    </tr>
+		    <tr>
+		      <td><select id="dateType1" name="dateType" class="idleField"><option>Date</option><option>Date Created</option><option>Date Valid</option><option>Date Available</option><option>Date Issued</option><option>Date Modified</option><option>Date Accepted</option><option>Date Copyrighted</option><option>Date Submitted</option></select></td>
+		      <td><input type="text" name="dateRow" id="dateRow1" size="40" class="idleField" /></td>
+		      <td><select id="dateEncoding1" name="dateEncoding" class="idleField"><option></option><option>Period</option><option>W3C-DTF</option></select></td>
+		    </tr>
+		  </table>
+		  
+		  <table id="typeTable" class="defaulttable">
+		    <tr>
+		      <td class="titlerow">Type<a href="http://dublincore.org/documents/usageguide/elements.shtml#type" target="blank" class="superscript" tabindex="-1">?</a></td>
+			  <td align="right"><a href="#type" class="addremovebutton" onclick="addRowToTable('type');" tabindex="-1">[+]</a><a href="#type" class="addremovebutton" onclick="removeRowFromTable('typeTable');" tabindex="-1">[-]</a></td>
+		    </tr>
+		    <tr>
+		      <td><input type="text" name="typeRow" id="typeRow1" size="40" class="idleField" /></td>
+		      <td><select name="typeType" id="typeType1" class="idleField"><option></option><option>DCMIType</option></select></td>
+		    </tr>
+		  </table>
+		  
+		  <table id="formatTable" class="defaulttable">
+		    <tr>
+		      <td class="titlerow">Format<a href="http://dublincore.org/documents/usageguide/elements.shtml#format" target="blank" class="superscript" tabindex="-1">?</a></td>
+			  <td align="right" colspan="3"><a href="#format" class="addremovebutton" onclick="addRowToTable('format');" tabindex="-1">[+]</a><a href="#format" class="addremovebutton" onclick="removeRowFromTable('formatTable');" tabindex="-1">[-]</a></td>
+		    </tr>
+		    <tr>
+		      <td><select id="formatType1" name="formatType" class="idleField"><option>Format</option><option>Extent</option><option>Medium</option></select></td>
+		      <td><input type="text" name="formatRow" id="formatRow1" size="40" class="idleField" /></td>
+		      <td><select id="formatEncoding1" name="formatEncoding" class="idleField"><option></option><option>IMT</option></select></td>
+		    </tr>
+		  </table>
+		  
+		  <table id="identifierTable" class="defaulttable">
+		    <tr>
+		      <td colspan="2" class="titlerow">Identifier<a href="http://dublincore.org/documents/usageguide/elements.shtml#identifier" target="blank" class="superscript" tabindex="-1">?</a></td>
+		      <td align="right" colspan="2"><a href="#identifier" class="addremovebutton" onclick="addRowToTable('identifier');" tabindex="-1">[+]</a><a href="#identifier" class="addremovebutton" onclick="removeRowFromTable('identifierTable');" tabindex="-1">[-]</a></td>
+		    </tr>
+		    <tr>
+		      <td><select id="identifierType1" name="identifierType" class="idleField"><option>Identifier</option><option>Bibliographic Citation</option></select></td>
+		      <td><input type="text" name="identifierRow" id="identifierRow1" size="40" class="idleField" /></td>
+		      <td><select id="identifierEncoding1" name="identifierEncoding" class="idleField"><option></option><option>URI</option></select></td>
+		    </tr>
+		  </table>
+		  
+		  <table id="sourceTable" class="defaulttable">
+		    <tr>
+		      <td class="titlerow">Source<a href="http://dublincore.org/documents/usageguide/elements.shtml#source" target="blank" class="superscript" tabindex="-1">?</a></td>
+			  <td align="right" colspan="2"><a href="#source" class="addremovebutton" onclick="addRowToTable('source');" tabindex="-1">[+]</a><a href="#source" class="addremovebutton" onclick="removeRowFromTable('sourceTable');" tabindex="-1">[-]</a></td>
+		    </tr>
+		    <tr>
+		      <td><input type="text" name="sourceRow" id="sourceRow1" size="40" class="idleField" /></td>
+		      <td><select name="sourceType" id="sourceType1" class="idleField"><option></option><option>URI</option></select></td>
+		    </tr>
+		  </table>
+		
+		  <table id="languageTable" class="defaulttable">
+		    <tr>
+		      <td class="titlerow">Language<a href="http://dublincore.org/documents/usageguide/elements.shtml#language" target="blank" class="superscript" tabindex="-1">?</a></td>
+			  <td align="right"><a href="#language" class="addremovebutton" onclick="addRowToTable('language');" tabindex="-1">[+]</a><a href="#language" class="addremovebutton" onclick="removeRowFromTable('languageTable');" tabindex="-1">[-]</a></td>
+		    </tr>
+		    <tr>
+		      <td><input type="text" name="languageRow" id="languageRow1" size="40" class="idleField"/></td>
+		      <td><select name="languageType" id="languageType1" class="idleField"><option></option><option>ISO 639-2</option><option>ISO 639-3</option></select></td>
+		    </tr>
+		  </table>
+		  
+		  <table id="relationTable" class="defaulttable">
+		    <tr>
+		      <td colspan="2" class="titlerow">Relation<a href="http://dublincore.org/documents/usageguide/elements.shtml#relation" target="blank" class="superscript" tabindex="-1">?</a></td>
+			  <td align="right"><a href="#relation" class="addremovebutton" onclick="addRowToTable('relation');" tabindex="-1">[+]</a><a href="#relation" class="addremovebutton" onclick="removeRowFromTable('relationTable');" tabindex="-1">[-]</a></td>
+		    </tr>
+		    <tr>
+		      <td><select name="relationType" id="relationType1" class="idleField"><option>Relation</option><option>Is Version Of</option><option>Has Version</option><option>Is Replaced By</option><option>Replaces</option><option>Is Required By</option><option>Requires</option><option>Is Part Of</option><option>Has Part</option><option>Is Referenced By</option><option>References</option><option>Is Format Of</option><option>Has Format</option><option>Conforms To</option></select></td>
+		      <td><input type="text" name="relationRow" id="relationRow1" size="40" class="idleField" /></td>
+		      <td><select name="relationEncoding" id="relationEncoding1" class="idleField"><option></option><option>URI</option></select></td>
+		    </tr>
+		  </table>
+		  
+		  <table id="coverageTable" class="defaulttable">
+		    <tr>
+		      <td colspan="2" class="titlerow">Coverage<a href="http://dublincore.org/documents/usageguide/elements.shtml#coverage" target="blank" class="superscript" tabindex="-1">?</a></td>
+			  <td align="right"><a href="#coverage" class="addremovebutton" onclick="addRowToTable('coverage');" tabindex="-1">[+]</a><a href="#coverage" class="addremovebutton" onclick="removeRowFromTable('coverageTable');" tabindex="-1">[-]</a></td>
+		    </tr>
+		    <tr>
+		      <td><select name="coverageType" class="idleField" id="coverageType1"><option>Coverage</option><option>Spatial</option><option>Temporal</option></select></td>
+		      <td><input type="text" name="coverageRow" size="40" class="idleField" id="coverageRow1"/></td>
+		      <td><select name="coverageEncoding" class="idleField" id="coverageEncoding1"><option id="blank1"></option><option id="box1">Box</option><option id="iso31661">ISO3166</option><option id="period1">Period</option><option id="point1">Point</option><option id="tgn1">TGN</option><option id="w3ctdf1">W3CTDF</option></select></td>
+		    </tr>
+		  </table>
+		  
+		  <table id="rightsTable" class="defaulttable">
+		    <tr>
+		      <td colspan="2" class="titlerow">Rights<a href="http://dublincore.org/documents/usageguide/elements.shtml#rights" target="blank" class="superscript" tabindex="-1">?</a></td>
+			  <td align="right"><a href="#rights" class="addremovebutton" onclick="addRowToTable('rights');" tabindex="-1">[+]</a><a href="#rights" class="addremovebutton" onclick="removeRowFromTable('rightsTable');" tabindex="-1">[-]</a></td>
+		    </tr>
+		    <tr>
+		      <td><select name="rightsType" class="idlefield"><option>Rights</option><option>License</option></select></td>
+		      <td><input type="text" name="rightsRow" size="40" class="idleField" /></td>
+		      <td><select name="rightsEncoding" class="idleField"><option></option><option>URI</option></select></td>
+		    </tr>
+		  </table>
+		  
+		  <table id="audienceTable" class="defaulttable">
+		    <tr>
+		      <td class="titlerow">Audience<a href="http://dublincore.org/documents/usageguide/elements.shtml#audience" target="blank" class="superscript" tabindex="-1">?</a></td>
+			  <td align="right"><a href="#audience" class="addremovebutton" onclick="addRowToTable('audience');" tabindex="-1">[+]</a><a href="#audience" class="addremovebutton" onclick="removeRowFromTable('audienceTable');" tabindex="-1">[-]</a></td>
+		    </tr>
+		    <tr>
+		      <td><select name="audienceType" id="audienceType1" class="idleField"><option>Audience</option><option>Education Level</option><option>Mediator</option></select></td>
+		      <td><input type="text" name="audienceRow" id="audienceRow1" size="40" class="idleField" /></td>
+		    </tr>
+		  </table>
+		
+		  <table id="provenanceTable" class="defaulttable">
+		    <tr>
+		      <td class="titlerow">Provenance<a href="http://dublincore.org/documents/usageguide/elements.shtml#provenance" target="blank" class="superscript" tabindex="-1">?</a></td>
+			  <td align="right"><a href="#provenance" class="addremovebutton" onclick="addRowToTable('provenance');" tabindex="-1">[+]</a><a href="#provenance" class="addremovebutton" onclick="removeRowFromTable('provenanceTable');" tabindex="-1">[-]</a></td>
+		    </tr>
+		    <tr>
+		      <td colspan="2"><input type="text" name="provenanceRow" id="provenanceRow1" size="40" class="idleField" /></td>
+		    </tr>
+		  </table>
+		
+		  <table id="rightsholderTable" class="defaulttable">
+		    <tr>
+		      <td class="titlerow">Rights Holder<a href="http://dublincore.org/documents/usageguide/elements.shtml#rightsHolder" target="blank" class="superscript" tabindex="-1">?</a></td>
+			  <td align="right"><a href="#rightsholder" class="addremovebutton" onclick="addRowToTable('rightsholder');" tabindex="-1">[+]</a><a href="#rightsholder" class="addremovebutton" onclick="removeRowFromTable('rightsholderTable');" tabindex="-1">[-]</a></td>
+		    </tr>
+		    <tr>
+		      <td colspan="2"><input type="text" name="rightsholderRow" size="40" class="idleField" /></td>
+		    </tr>
+		  </table>
+		
+		  <table id="instructionalmethodTable" class="defaulttable">
+		    <tr>
+		      <td class="titlerow">Instructional Method<a href="http://dublincore.org/documents/usageguide/elements.shtml#instructionalMethod" target="blank" class="superscript" tabindex="-1">?</a></td>
+			  <td align="right"><a href="#instructionalmethod" class="addremovebutton" onclick="addRowToTable('instructionalmethod');" tabindex="-1">[+]</a><a href="#instructionalmethod" class="addremovebutton" onclick="removeRowFromTable('instructionalmethodTable');" tabindex="-1">[-]</a></td>
+		    </tr>
+		    <tr>
+		      <td colspan="2"><input type="text" name="instructionalmethodRow" size="40" class="idleField" /></td>
+		    </tr>
+		  </table>
+		
+		  <table id="accrualmethodTable" class="defaulttable">
+		    <tr>
+		      <td class="titlerow">Accrual Method<a href="http://dublincore.org/documents/usageguide/elements.shtml#accrualMethod" target="blank" class="superscript" tabindex="-1">?</a></td>
+			  <td align="right"><a href="#accrualmethod" class="addremovebutton" onclick="addRowToTable('accrualmethod');" tabindex="-1">[+]</a><a href="#accrualmethod" class="addremovebutton" onclick="removeRowFromTable('accrualmethodTable');" tabindex="-1">[-]</a></td>
+		    </tr>
+		    <tr>
+		      <td colspan="2"><input type="text" name="accrualmethodRow" size="40" class="idleField" /></td>
+		    </tr>
+		  </table>
+		
+		  <table id="accrualperiodicityTable" class="defaulttable">
+		    <tr>
+		      <td class="titlerow">Accrual Periodicity<a href="http://dublincore.org/documents/usageguide/elements.shtml#accrualPeriodicity" target="blank" class="superscript" tabindex="-1">?</a></td>
+			  <td align="right"><a href="#accrualperiodicity" class="addremovebutton" onclick="addRowToTable('accrualperiodicity');" tabindex="-1">[+]</a><a href="#accrualperiodicity" class="addremovebutton" onclick="removeRowFromTable('accrualperiodicityTable');" tabindex="-1">[-]</a></td>
+		    </tr>
+		    <tr>
+		      <td colspan="2"><input type="text" name="accrualperiodicityRow" size="40" class="idleField" /></td>
+		    </tr>
+		  </table>
+		
+		  <table id="accrualpolicyTable" class="defaulttable">
+		    <tr>
+		      <td class="titlerow">Accrual Policy<a href="http://dublincore.org/documents/usageguide/elements.shtml#accrualPolicy" target="blank" class="superscript" tabindex="-1">?</a></td>
+			  <td align="right"><a href="#accrualpolicy" class="addremovebutton" onclick="addRowToTable('accrualpolicy');" tabindex="-1">[+]</a><a href="#accrualpolicy" class="addremovebutton" onclick="removeRowFromTable('accrualpolicyTable');" tabindex="-1">[-]</a></td>
+		    </tr>
+		    <tr>
+		      <td colspan="2"><input type="text" name="accrualpolicyRow" size="40" class="idleField" /></td>
+		    </tr>
+		  </table>
+		</div>
+		</div>
+		<br/>		
+		<div class="rightbox" style="margin-left:-200px">
+		<div class="boxheader">Output Options</div>
+		  <div class="boxtext" style="padding-left:10px;position:relative;" id="outputopts">
+		  <form action="save.php" method="post" />
+		    Display output as: <select id="outputType" name="outputType" onchange="showHideOutput();"><option value="xml">XML</option><option value="html">HTML</option><option value="xhtml">XHTML</option></select><br/>
+			  <div id="xmloptions" style="display:inline">
+			    <input type="checkbox" id="adddeclaration" class="checkbox" /><label>Include standard XML version/encoding declaration.</label><br/>
+			    <input type="checkbox" id="addroot" class="checkbox" /><label>Include root element and namespace.</label><br/>
+			      <div style="margin-left:20px"><label>Desired root element:</label> <input type="text" value="metadata" id="rootname" /></div>
+			    <input type="checkbox" id="adddc" class="checkbox" /><label>Include namespace reference for standard Dublin Core (DC Elements).</label><br/>
+			    <input type="checkbox" id="addqualified" class="checkbox" /><label>Include namespace reference for qualified Dublin Core (DC Terms).</label><br/>
+			  </div>
+			  <div id="htmloptions" style="display:none">
+			    <input type="checkbox" id="adddeclarationhtml" class="checkbox" /><label>Include a HTML version/encoding declaration (HTML 4.01 Strict) as well as the &lt;html&gt; and &lt;body&gt; tags.</label><br/>
+			    <input type="checkbox" id="addhead" class="checkbox" /><label>Include a &lt;head&gt; tag referencing DC-HTML.</label><br/>
+			    <input type="checkbox" id="addtitle" class="checkbox" /><label>Include a &lt;title&gt; tag.</label><br/>
+			      <div style="margin-left:20px"><label>Desired title: </label><input type="text" value="metadata" id="titlename" /><br/></div>
+			    <input type="checkbox" id="addlink" class="checkbox" /><label>Include a &lt;link&gt; tag to the DC element set.</label><br/>
+			    <input type="checkbox" id="addlinkqualified" class="checkbox" /><label>Include a &lt;link&gt; tag to the qualified DCTERMS element set.</label><br/>
+			  </div>
+			  <div id="xhtmloptions" style="display:none">
+			    <input type="checkbox" id="adddeclarationxhtml" class="checkbox" /><label>Include XML and XHTML version/encoding declarations (XHTML 1.0 Strict) as well as the &lt;html&gt; and &lt;body&gt; tags.</label><br/>
+			    <input type="checkbox" id="addheadx" class="checkbox" /><label>Include a &lt;head&gt; tag referencing DC-HTML.</label><br/>
+			    <input type="checkbox" id="addtitlex" class="checkbox" /><label>Include a &lt;title&gt; tag.</label><br/>
+			      <div style="margin-left:20px"><label>Desired title:</label> <input type="text" value="metadata" id="titlenamex" /><br/></div>
+			    <input type="checkbox" id="addlinkx" class="checkbox" /><label>Include a &lt;link&gt; tag to the DC element set.</label><br/>
+			    <input type="checkbox" id="addlinkxqualified" class="checkbox" /><label>Include a &lt;link&gt; tag to the qualified DCTERMS element set.</label><br/>
+			  </div>
+			  <br/>
+			  <input type="button" value="Generate Metadata!" onclick="generateCode();" class="button" id="generatebutton"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="Reset Page" onclick="javascript:location.reload(true)" class="button" id="resetbutton" />
+		  </div>
+		</div>
+		<div class="rightbox" style="margin-left:-200px">
+		<div class="boxheader">Output</div>
+		<div class="boxtext" style="padding:10px;margin:auto;">
+		  <textarea rows="20" cols="112" name="xmlresults" id="xmlresults"></textarea>
+		  <textarea rows="20" cols="112" name="htmlresults" id="htmlresults" style="display:none"></textarea>
+		  <textarea rows="20" cols="112" name="xhtmlresults" id="xhtmlresults" style="display:none"></textarea>
+		  <br/>
+		  <input type="submit" value="Save Generated Metadata to File" class="button" />
+		</div>
+		</div>
+		<div class="lowerbox" style="margin-left:-200px">
+		<div class="lowertext">
+		  <p><a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/3.0/80x15.png" height="15" width="80"/></a> The content on this site is released under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+		  <p>
+		  <!-- AddThis Button BEGIN -->
+		  <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pubid=ra-4d98b0b42d1454f1"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a>
+		  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4d98b0b42d1454f1"></script>
+		  <!-- AddThis Button END -->
+		  </p>
+		</div>
+		</div>
+		</div><!--End rightpage-->
+		</div><!--End page-->
+  </div><!--End container-->
+
+<!--Begin modal popups-->
+<div id="findDCMIType" title="DCMI Type Vocabulary Finder">
+	<p>Start typing in the field below to find a valid DCMI Type.</p>
+	  <input id="DCMITypeFinder" class="finderinput"  size="45" />
+	  <input type="button" value="Add to Record" class="modalbutton" onclick="addDCMI();" />
+	<p>If you are very unfamiliar with the DCMI Type Vocabulary, you may want to consult <a href="http://dublincore.org/documents/dcmi-type-vocabulary/" target="blank" style="color:#03406A">this website</a> first.</p>
+</div>
+
+<div id="findIMTType" title="IMT Vocabulary Finder">
+<form id="IMTlookup" action="#">
+	<p>Start typing in the field below to find a valid IMT (Internet Media Type). Please note that this search capability may not have access to the entire current list of current IMTs -- you can search the whole thing over <a href="http://www.iana.org/assignments/media-types/index.html" target="blank" style="color:03406A">here</a>.</p>
+	  <input id="IMTTypeFinder" class="finderinput" size="45" />
+	  <input type="button" value="Add to Record" class="modalbutton" onclick="addIMT();" />
+	<p>If you are very unfamiliar with the IMT Vocabulary, you may want to consult <a href="http://www.iana.org/assignments/media-types/" target="blank" style="color:#03406A">this website</a> first.</p>
+	</form>
+</div>
+
+<div id="findISO3166" title="ISO-3166 Country Code Lookup">
+<form id="ISO3166lookup" action="#">
+	<p>Start typing in the field below to find a country by name. After you select a country, the correct ISO-3166 code will automatically appear in the box below. Please note that this search capability may not have access to the entire current list of current ISO-3166 codes -- you can search the whole thing over <a href="http://www.iso.org/iso/home/standards/country_codes/country_names_and_code_elements.htm" target="blank" style="color:03406A">here</a></p>
+	  <input id="ISO3166Finder" class="finderinput" size="45" />
+	  <input type="button" value="Add to Record" class="modalbutton" onclick="addISO3166();" />
+	<p>If you are very unfamiliar with the ISO-3166 standard, you may want to consult <a href="http://en.wikipedia.org/wiki/ISO_3166" target="blank" style="color:#03406A">this website</a> first.</p>
+</form>
+</div>
+
+<div id="createDCMIPeriod" title="DCMI Period Value Builder">
+<form id="DCMIPeriodBuilder" action="#">
+	<p>DCMI Period has four elements: a name, a starting point, an ending point, and an encoding scheme. No elements are mandatory (well, you should probably have at least one).</p>
+	  <label>Name:</label><input id="PeriodName" size="45" onblur="buildDCMIPeriod();" /><br/>
+	  <label>Start:</label><input id="PeriodStart" size="45" onblur="buildDCMIPeriod();" /><br/>
+	  <label>End:</label><input id="PeriodEnd" size="45" onblur="buildDCMIPeriod();" /><br/>
+	  <label>Scheme:</label><input id="PeriodScheme" size="45" onblur="buildDCMIPeriod();" /><br/>
+	  <label>Full String:</label><input id="PeriodString" size="45" />
+	    <input type="button" value="Add to Record as Date" class="modalbutton" onclick="addDCMIPeriodDate();" style="margin-bottom:10px;" />
+	    <input type="button" value="Add to Record as Coverage" class="modalbutton" onclick="addDCMIPeriodCoverage();" />
+	<p>If you are very unfamiliar with the DCMI Period Encoding Scheme, you may want to consult <a href="http://dublincore.org/documents/dcmi-period/" target="blank" style="color:#03406A">this website</a> first.</p>
+</form>
+</div>
+
+<div id="createDCMIBox" title="DCMI Box Value Builder">
+<form id="DCMIBoxBuilder" action="#">
+	<p>DCMI Box has ten elements used to define a place's boundaries (in either two or three dimensions), the units used to define those boundaries, the map projection used, and a name. No elements are mandatory (well, you should probably have at least one).</p>
+	  <label>Name:</label> <input id="BoxName" size="45" onblur="buildDCMIBox();"/><br/>
+	  <label>North Limit:</label> <input id="BoxNorth" size="45" onblur="buildDCMIBox();"/><br/>
+	  <label>East Limit:</label> <input id="BoxEast" size="45" onblur="buildDCMIBox();"/><br/>
+	  <label>South Limit:</label> <input id="BoxSouth" size="45" onblur="buildDCMIBox();"/><br/>
+	  <label>West Limit:</label> <input id="BoxWest" size="45" onblur="buildDCMIBox();"/><br/>
+	  <label>Upper Limit:</label> <input id="BoxUpper" size="45" onblur="buildDCMIBox();"/><br/>
+	  <label>Lower Limit:</label> <input id="BoxLower" size="45" onblur="buildDCMIBox();"/><br/>
+	  <label>2D Units:</label> <input id="Box2DUnits" size="45" onblur="buildDCMIBox();"/><br/>
+	  <label>3D Units:</label> <input id="Box3DUnits" size="45" onblur="buildDCMIBox();"/><br/>
+	  <label>Map Projection:</label> <input id="BoxMap" size="45" onblur="buildDCMIBox();"/><br/>
+	  <label>Full String:</label> <input id="BoxString" size="45" />
+	    <input type="button" value="Add to Record" class="modalbutton" onclick="addDCMIBox();" />
+	<p>If you are very unfamiliar with the DCMI Box Encoding Scheme, you may want to consult <a href="http://dublincore.org/documents/dcmi-box/" target="blank" style="color:#03406A">this website</a> first.</p>
+</form>
+</div>
+
+<div id="createDCMIPoint" title="DCMI Point Value Builder">
+<form id="DCMIPointBuilder" action="#">
+	<p>DCMI Point has seven elements used to define the coordinates of a specific point (in either two or three dimensions), the units used to define those coordinates, the map projection used, and a name. No elements are mandatory (well, you should probably have at least one).</p>
+	  <label>Name:</label> <input id="PointName" size="45" onblur="buildDCMIPoint();"/><br/>
+	  <label>East:</label> <input id="PointEast" size="45" onblur="buildDCMIPoint();"/><br/>
+	  <label>North:</label> <input id="PointNorth" size="45" onblur="buildDCMIPoint();"/><br/>
+	  <label>Elevation:</label> <input id="PointElev" size="45" onblur="buildDCMIPoint();"/><br/>
+	  <label>2D Units:</label> <input id="Point2DUnits" size="45" onblur="buildDCMIPoint();"/><br/>
+	  <label>3D Units:</label> <input id="Point3DUnits" size="45" onblur="buildDCMIPoint();"/><br/>
+	  <label>Map Projection:</label> <input id="PointMap" size="45" onblur="buildDCMIPoint();"/><br/>
+	  <label>Full String:</label> <input id="PointString" size="45" />
+	    <input type="button" value="Add to Record" class="modalbutton" onclick="addDCMIPoint();" />
+	  <p>If you are very unfamiliar with the DCMI Point Encoding Scheme, you may want to consult <a href="http://dublincore.org/documents/dcmi-point/" target="blank" style="color:#03406A">this website</a> first.</p>
+</form>
+</div>
+
+<!--<div id="createW3CDTF" title="W3CDTF Value Builder">
+<form id="W3CDTFBuilder" action="#">
+	<p>W3CDTF has six increasingly specific elements for specifying a date and time: year, month, date, hours and minutes, seconds, and fractions of a second. You don't have to go all the way out to fractions of a second (unless you really want to). The format is more or less YYYY-MM-DD hh:mm:ss.ms with a "T" to separate the date and time and the timezone appended to the end.</p>
+	  <p>Year: <input id="W3Year" size="4" onblur="buildW3CDTF();"/></p>
+	  <p>Month: <input id="W3Month" size="2" onblur="buildW3CDTF();"/></p>
+	  <p>Date: <input id="W3Date" size="2" onblur="buildW3CDTF();"/></p>
+	  <p>Hours: <input id="W3Hours" size="2" onblur="buildW3CDTF();"/></p>
+	  <p>Minutes: <input id="W3Minutes" size="2" onblur="buildW3CDTF();"/></p>
+	  <p>Seconds: <input id="W3Seconds" size="2" onblur="buildW3CDTF();"/></p>
+	  <p>Fractions of Seconds: <input id="W3SecondsFractions" size="45" onblur="buildW3CDTF();" /></p>
+	  <p>Local Time Zone: 
+	    <select id="W3Timezone" onblur="buildW3CDTF();"> 
+	    <option value="">Select One</option>
+        <option value="-12:00">(GMT -12:00) International Dateline West</option>
+        <option value="-11:00">(GMT -11:00) US Outlying Islands</option>
+        <option value="-10:00">(GMT -10:00) Hawaii</option>
+        <option value="-9:00">(GMT -9:00) Alaska</option>
+        <option value="-8:00">(GMT -8:00) Pacific Time (US &amp; Canada)</option>
+        <option value="-7:00">(GMT -7:00) Mountain Time (US &amp; Canada)</option>
+        <option value="-6:00">(GMT -6:00) Central Time (US &amp; Canada), Mexico City</option>
+        <option value="-5:00">(GMT -5:00) Eastern Time (US &amp; Canada), Bogota, Lima</option>
+        <option value="-4:00">(GMT -4:00) Atlantic Time (Canada), Caracas, La Paz</option>
+        <option value="-3.50">(GMT -3:30) Newfoundland</option>
+        <option value="-3:00">(GMT -3:00) Brazil, Buenos Aires, Georgetown</option>
+        <option value="-2:00">(GMT -2:00) Mid-Atlantic</option>
+        <option value="-1:00">(GMT -1:00) Azores, Cape Verde Islands</option>
+        <option value="+0:00">(GMT) Western Europe Time, London, Lisbon, Casablanca</option>
+        <option value="+1:00">(GMT +1:00) Brussels, Copenhagen, Madrid, Paris</option>
+        <option value="+2:00">(GMT +2:00) Kaliningrad, South Africa</option>
+        <option value="+3:00">(GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg</option>
+        <option value="+3.50">(GMT +3:30) Tehran</option>
+        <option value="+4:00">(GMT +4:00) Abu Dhabi, Muscat, Baku, Tbilisi</option>
+        <option value="+4.50">(GMT +4:30) Kabul</option>
+        <option value="+5:00">(GMT +5:00) Ekaterinburg, Islamabad, Karachi, Tashkent</option>
+        <option value="+5.50">(GMT +5:30) Bombay, Calcutta, Madras, New Delhi</option>
+        <option value="+5.75">(GMT +5:45) Kathmandu</option>
+        <option value="+6:00">(GMT +6:00) Almaty, Dhaka, Colombo</option>
+        <option value="+7:00">(GMT +7:00) Bangkok, Hanoi, Jakarta</option>
+        <option value="+8:00">(GMT +8:00) Beijing, Perth, Singapore, Hong Kong</option>
+        <option value="+9:00">(GMT +9:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk</option>
+        <option value="+9.50">(GMT +9:30) Adelaide, Darwin</option>
+        <option value="+10:00">(GMT +10:00) Eastern Australia, Guam, Vladivostok</option>
+        <option value="+11:00">(GMT +11:00) Magadan, Solomon Islands, New Caledonia</option>
+        <option value="+12:00">(GMT +12:00) Auckland, Wellington, Fiji, Kamchatka</option>
+	    
+	    </select>
+	  </p>
+	  <p>Full String: <input id="W3String" size="45" /></p>
+	    <input type="button" value="Add to Record as Date" class="modalbutton" onclick="addW3Date();" style="margin-bottom:10px;" />
+	    <input type="button" value="Add to Record as Coverage" class="modalbutton" onclick="addW3Coverage();" />
+	  <p>If you are very unfamiliar with the W3-CDTF, you may want to consult <a href="http://www.w3.org/TR/NOTE-datetime" target="blank" style="color:#03406A">this website</a> first.</p>
+</form>
+</div>-->
+<!--Thanks to http://michaelapproved.com/articles/timezone-dropdown-select-list-->
+
+<div id="findISO6392" title="ISO 639-2 Language Code Finder">
+<form id="ISO6392lookup" action="#">
+	<p>Start typing in the field below to find a language by name. After you select a language, the correct ISO 639-2 code will automatically appear in the box below. Please note that this search capability may not have access to the entire current list of current ISO 639-2 codes -- you can search the whole thing over <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="blank" style="color:03406A">here</a>.</p>
+	  <input id="ISO6392Finder" class="finderinput" size="45" />
+	  <input type="button" value="Add to Record" class="modalbutton" onclick="addISO6392();" />
+	<p>If you are very unfamiliar with the ISO 639-2 standard, you may want to consult <a href="http://www.loc.gov/standards/iso639-2/" target="blank" style="color:#03406A">this website</a> first.</p>
+	<p>Note: this tool uses the terminology applications codes (ISO 639-2/T), not the bibliographic applications codes. For more on this, <a href="http://en.wikipedia.org/wiki/ISO_639-2#B_and_T_codes" target="blank" style="color:#03406A">click here</a>.</p>
+</form>
+</div>
+
+<div id="findISO6393" title="ISO 639-3 Language Code Finder">
+<form id="ISO6393lookup" action="#">
+	<p>Start typing in the field below to find a language by name. After you select a language, the correct ISO 639-3 code will automatically appear in the box below. Please note that this search capability may not have access to the entire current list of current ISO 639-2 codes -- you can search the whole thing over <a href="http://www.sil.org/iso639-3/codes.asp" target="blank" style="color:03406A">here</a>.</p>
+	  <input id="ISO6393Finder" class="finderinput" size="45" />
+	  <input type="button" value="Add to Record" class="modalbutton" onclick="addISO6393();" />
+	<p>If you are very unfamiliar with the ISO 639-3 standard, you may want to consult <a href="http://www.sil.org/iso639-3/" target="blank" style="color:#03406A">this website</a> first.</p>
+</form>
+</div>
+
+<div id="findAGROVOC" title="AGROVOC Vocabulary Search">
+<form id="AGROVOClookup" action="#">
+	<p>Start typing in the field below to search for a term from the AGROVOC thesaurus. Suggested terms will appear as you type. Please note that this search capability may not have access to the entire current AGROVOC thesaurus -- you can search the whole thing over <a href="http://aims.fao.org/standards/agrovoc/functionalities/search" target="blank" style="color:#03406A">here</a>.</p>
+	  <input id="AGROVOCfinder" class="finderinput" size="45" />
+	  <input type="button" value="Add to Record" class="modalbutton" onclick="addAGROVOC();" />
+	<p>If you are unfamiliar with AGROVOC, you may want to consult <a href="http://aims.fao.org/standards/agrovoc/about" target="blank" style="color:#03406A">this website</a> first.</p>
+	<p>This search capability is graciously made possible by the HIVE project, a collaboration of the University of North Carolina at Chapel Hill's School of Information and Library Science/Metadata Research Center and NESCent. Learn more about HIVE <a href="https://www.nescent.org/sites/hive/Main_Page" target="blank" style="color:#03406A">here</a>.</p>
+</form>
+</div>
+
+<div id="findITIS" title="ITIS Vocabulary Search">
+<form id="ITISlookup" action="#">
+	<p>Start typing in the field below to search for a term from the ITIS taxonomy. Suggested terms will appear as you type. Please note that this search capability may not have access to the entire current ITIS taxonomy -- you can search the whole thing over <a href="http://www.itis.gov/" target="blank" style="color:#03406A">here</a>.</p>
+	  <input id="ITISfinder" class="finderinput" size="45" />
+	  <input type="button" value="Add to Record" class="modalbutton" onclick="addITIS();" />
+	<p>If you are unfamiliar with ITIS, you may want to consult <a href="http://www.itis.gov/info.html" target="blank" style="color:#03406A">this website</a> first.</p>
+	<p>This search capability is graciously made possible by the HIVE project, a collaboration of the University of North Carolina at Chapel Hill's School of Information and Library Science/Metadata Research Center and NESCent. Learn more about HIVE <a href="https://www.nescent.org/sites/hive/Main_Page" target="blank" style="color:#03406A">here</a>.</p>
+</form>
+</div>
+
+<div id="findMESH" title="MESH Vocabulary Search">
+<form id="MESHlookup" action="#">
+	<p>Start typing in the field below to search for a term from the MESH vocabulary. Suggested terms will appear as you type. Please note that this search capability may not have access to the entire current MESH vocabulary -- you can search the whole thing over <a href="http://www.nlm.nih.gov/mesh/MBrowser.html" target="blank" style="color:03406A">here</a>.</p>
+	  <input id="MESHfinder" class="finderinput" size="45" />
+	  <input type="button" value="Add to Record" class="modalbutton" onclick="addMESH();" />
+	<p>If you are unfamiliar with MESH, you may want to consult <a href="http://www.nlm.nih.gov/mesh/" target="blank" style="color:#03406A">this website</a> first.</p>
+	<p>This search capability is graciously made possible by the HIVE project, a collaboration of the University of North Carolina at Chapel Hill's School of Information and Library Science/Metadata Research Center and NESCent. Learn more about HIVE <a href="https://www.nescent.org/sites/hive/Main_Page" target="blank" style="color:#03406A">here</a>.</p>
+</form>
+</div>
+
+<div id="findLCSH" title="LCSH Vocabulary Search">
+<form id="LCSHlookup" action="#">
+	<p>Start typing in the field below to search for a term from the LCSH vocabulary. Suggested terms will appear as you type. Please note that this search capability may not have access to the entire current LCSH vocabulary -- you can search the whole thing over <a href="http://authorities.loc.gov/" target="blank" style="color:03406A">here</a>.</p>
+	  <input id="LCSHfinder" class="finderinput"  size="45" />
+	  <input type="button" value="Add to Record" class="modalbutton" onclick="addLCSH();" />
+	<p>If you are unfamiliar with LCSH, you may want to visit your local library. Or <a href="http://en.wikipedia.org/wiki/Library_of_Congress_Subject_Headings" target="blank" style="color:#03406A">this</a>.</p>
+	<p>This search capability is graciously made possible by the HIVE project, a collaboration of the University of North Carolina at Chapel Hill's School of Information and Library Science/Metadata Research Center and NESCent. Learn more about HIVE <a href="https://www.nescent.org/sites/hive/Main_Page" target="blank" style="color:#03406A">here</a>.</p>
+</form>
+</div>
+
+
+<div id="findTGN" title="TGN Vocabulary Search">
+<form id="TGNlookup" action="#">
+	<p>Start typing in the field below to search for a term from the TGN vocabulary. Suggested terms will appear as you type. Please note that this search capability may not have access to the entire current TGN vocabulary -- you can search the whole thing over <a href="http://www.getty.edu/research/tools/vocabularies/tgn/index.html" target="blank" style="color:03406A">here</a>.</p>
+	  <input id="TGNfinder" class="finderinput" size="45" />
+	  <input type="button" value="Add to Record as Subject" class="modalbutton" onclick="addTGNSubject();" style="margin-bottom:10px;" />
+	  <input type="button" value="Add to Record as Coverage" class="modalbutton" onclick="addTGNCoverage();" />
+	<p>If you are unfamiliar with TGN, you may want to consult <a href="http://www.getty.edu/research/tools/vocabularies/tgn/about.html" target="blank" style="color:#03406A">this website</a> first.</p>
+	<p>This search capability is graciously made possible by the HIVE project, a collaboration of the University of North Carolina at Chapel Hill's School of Information and Library Science/Metadata Research Center and NESCent. Learn more about HIVE <a href="https://www.nescent.org/sites/hive/Main_Page" target="blank" style="color:#03406A">here</a>.</p>
+</form>
+</div>
+
+</body>
+</html>

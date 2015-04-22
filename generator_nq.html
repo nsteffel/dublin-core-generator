@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>The Simple Dublin Core Generator!</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<meta name="description" content="The Simple Generator for generating Dublin Core with only the 15 basic elements." />
+	<meta name="google-site-verification" content="D-SyuAiarK1zPhnqWgDGWRTkeuD7AgfOJ396-G9wlds" />
+	
+	<!--Oh look, Dublin Core code!-->
+	<link rel="DC.Title" href="www.dublincoregenerator.com" />
+	<meta name="DC.Creator" content="Nick Steffel" />
+	<meta name="DC.Subject" scheme="DCTERMS.LCSH" content="Dublin Core" />
+	<meta name="DC.Description" content="dublincoregenerator.com is a free and easy to use set of online tools for generating XML or HTML Dublin Core metadata code." />
+	<meta name="DCTERMS.Created" scheme="DCTERMS.W3CTDF" content="2010-12-04" />
+	<meta name="DCTERMS.Modified" scheme="DCTERMS.W3CTDF" content="2012-09-26" />
+	<meta name="DC.Type" scheme="DCTERMS.DCMIType" content="InteractiveResource" />
+	<meta name="DC.Format" scheme="DCTERMS.IMT" content="application/xhtml+xml" />
+	<link rel="DC.Identifier" href="http://www.dublincoregenerator.com" />
+	<meta name="DC.Language" content="English" />
+	<meta name="DC.Language" scheme="DCTERMS.ISO639-3" content="eng" />
+	<link rel="DC.Rights" href="http://creativecommons.org/licenses/by-nc/3.0/" />
+	
+	<link rel="stylesheet" type="text/css" href="css/dcstyle.css"></link>
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.8.17.custom.css"></link>
+	<link rel="icon" href="/img/favicon.ico" type="image/x-icon"></link>
+	
+	<script type="text/javascript" src="js/generator_nq.js"></script>
+	<script type="text/javascript" src="js/interface_nq.js"></script>
+	<script type="text/javascript" src="js/analytics.js"></script>
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.anirows.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript">
+	$(function() {
+	$( "input:button, input:submit").button();
+	});
+	</script>
+</head>
+<body class="indexbody">
+  <div class="container">
+    <div class="header">dublincoregenerator.com - a better dublin core generator</div>
+    <ul id="newmenu">
+      <li><a href="index.html" title="Main Page">Main Page</a></li>
+	  <li><a href="generator_nq.html" title="Simple Dublin Core Generator">Simple Generator</a></li>
+	  <li><a href="generator.html" title="Advanced Dublin Core Generator">Advanced Generator</a></li>
+	  <li><a href="generator_zc.html" title="xZINECOREx Generator">xZINECOREx Generator</a></li>
+	  <li><a href="about.html" title="About">About</a></li>
+	  <li><a href="contribute.html" title="Contribute">Contribute</a></li>
+    </ul>
+	<div>&nbsp;</div>
+	  <div class="page">
+	  <div class="centerpage">
+	  <div class="centerbox">
+		<div class="boxheader">Directions</div>
+		<div class="boxtext">
+		  <ul class="directionslist">
+		  <li>Fill in the fields below and click on "Generate Code!" to convert your input into fully formed Dublin Core metadata code.  Additional options for the format of the output code are available below.</li>
+		  <li>If you need additional copies of a given field, click the plus sign to the upper-right of the tag's name to add an additional copy of it.</li>
+		  <li>Click the minus sign to delete any unneeded additional copies -- don't worry about removing tags you don't intend to use, the system will ignore any empty tags (and you can't delete the first row anyway).</li>
+		  <li>If you are unsure how a specific tag works, you can click the question mark next to the tag's name to see the tag's entry in Diane Hilmann's wonderful guide "Using Dublin Core -- The Elements."</li>
+		  <li>If you would like to use encoding schemes and the more advanced qualified elements of Dublin Core metadata, use the Advanced Generator located <a href="generator.html">here</a>.</li>
+		  </ul> 
+		</div>
+	  </div>
+	  &nbsp;
+	  <div class="centerbox" style="margin-right:200px">
+	  <div class="boxheader">Input</div>
+	  <div class="boxtext">
+	  &nbsp;
+		<table id="titleTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Title<a href="http://dublincore.org/documents/usageguide/elements.shtml#title" target="blank" class="superscript" tabindex="-1">?</a></td><td align="right"><a href="#title" class="addremovebutton" onclick="addRowToTable('title');" tabindex="-1">[+]</a><a href="#title" class="addremovebutton" onclick="removeRowFromTable('titleTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="text" name="titleRow" id="titleRow1" size="40" class="idleField" /></td>
+		  </tr>
+		</table>
+		
+		<table id="creatorTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Creator<a href="http://dublincore.org/documents/usageguide/elements.shtml#creator" target="blank" class="superscript" tabindex="-1">?</a></td><td align="right"><a href="#creator" class="addremovebutton" onclick="addRowToTable('creator');" tabindex="-1">[+]</a><a href="#creator" class="addremovebutton" onclick="removeRowFromTable('creatorTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="text" name="creatorRow" id="creatorRow1" size="40" class="idleField"  /></td>
+		  </tr>
+		</table>
+		
+		<table id="subjectTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Subject<a href="http://dublincore.org/documents/usageguide/elements.shtml#subject" target="blank" class="superscript" tabindex="-1">?</a></td><td align="right"><a href="#subject" class="addremovebutton" onclick="addRowToTable('subject');" tabindex="-1">[+]</a><a href="#subject" class="addremovebutton" onclick="removeRowFromTable('subjectTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="text" name="subjectRow" id="subjectRow1" size="40" class="idleField" /></td>
+		</tr>
+		</table>
+		
+		<table id="descriptionTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Description<a href="http://dublincore.org/documents/usageguide/elements.shtml#description" target="blank" class="superscript" tabindex="-1">?</a></td><td align="right"><a href="#description" class="addremovebutton" onclick="addRowToTable('description');" tabindex="-1">[+]</a><a href="#description" class="addremovebutton" onclick="removeRowFromTable('descriptionTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><textarea rows="5" cols="50" name="descriptionRow" id="descriptionRow1" class="idleField"></textarea></td>
+		  </tr>
+		</table>
+		
+		<table id="publisherTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Publisher<a href="http://dublincore.org/documents/usageguide/elements.shtml#publisher" target="blank" class="superscript" tabindex="-1">?</a></td><td align="right"><a href="#publisher" class="addremovebutton" onclick="addRowToTable('publisher');" tabindex="-1">[+]</a><a href="#publisher" class="addremovebutton" onclick="removeRowFromTable('publisherTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="text" name="publisherRow" id="publisherRow1" size="40" class="idleField" /></td>
+		  </tr>
+		</table>
+		
+		<table id="contributorTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Contributor<a href="http://dublincore.org/documents/usageguide/elements.shtml#contributor" target="blank" class="superscript" tabindex="-1">?</a></td><td align="right"><a href="#contributor" class="addremovebutton" onclick="addRowToTable('contributor');" tabindex="-1">[+]</a><a href="#contributor" class="addremovebutton" onclick="removeRowFromTable('contributorTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="text" name="contributorRow" id="contributorRow1" class="idleField" size="40" /></td>
+		  </tr>
+		</table>
+		
+		<table id="dateTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Date<a href="http://dublincore.org/documents/usageguide/elements.shtml#date" target="blank" class="superscript" tabindex="-1">?</a></td><td align="right"><a href="#date" class="addremovebutton" onclick="addRowToTable('date');" tabindex="-1">[+]</a><a href="#date" class="addremovebutton" onclick="removeRowFromTable('dateTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="text" name="dateRow" id="dateRow1" size="40" class="idleField" /></td>
+		 </tr>
+		</table>
+		
+		<table id="typeTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Type<a href="http://dublincore.org/documents/usageguide/elements.shtml#type" target="blank" class="superscript" tabindex="-1">?</a></td><td align="right"><a href="#type" class="addremovebutton" onclick="addRowToTable('type');" tabindex="-1">[+]</a><a href="#type" class="addremovebutton" onclick="removeRowFromTable('typeTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="text" name="typeRow" id="typeRow1" size="40" class="idleField" /></td>
+		 </tr>
+		</table>
+		
+		<table id="formatTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Format<a href="http://dublincore.org/documents/usageguide/elements.shtml#format" target="blank" class="superscript" tabindex="-1">?</a></td><td align="right"><a href="#format" class="addremovebutton" onclick="addRowToTable('format');" tabindex="-1">[+]</a><a href="#format" class="addremovebutton" onclick="removeRowFromTable('formatTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="text" name="formatRow" id="formatRow1" size="40" class="idleField" /></td>
+		  </tr>
+		</table>
+		
+		<table id="identifierTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Identifier<a href="http://dublincore.org/documents/usageguide/elements.shtml#identifier" target="blank" class="superscript" tabindex="-1">?</a></td><td align="right"><a href="#identifier" class="addremovebutton" onclick="addRowToTable('identifier');" tabindex="-1">[+]</a><a href="#identifier" class="addremovebutton" onclick="removeRowFromTable('identifierTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="text" name="identifierRow" id="identifierRow1" size="40" class="idleField" /></td>
+		</tr>
+		</table>
+		
+		<table id="sourceTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Source<a href="http://dublincore.org/documents/usageguide/elements.shtml#source" target="blank" class="superscript" tabindex="-1">?</a></td><td align="right"><a href="#source" class="addremovebutton" onclick="addRowToTable('source');" tabindex="-1">[+]</a><a href="#source" class="addremovebutton" onclick="removeRowFromTable('sourceTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="text" name="sourceRow" id="sourceRow1" size="40" class="idleField" /></td>
+		 </tr>
+		</table>
+		
+		<table id="languageTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Language<a href="http://dublincore.org/documents/usageguide/elements.shtml#language" target="blank" class="superscript" tabindex="-1">?</a></td><td align="right"><a href="#language" class="addremovebutton" onclick="addRowToTable('language');" tabindex="-1">[+]</a><a href="#language" class="addremovebutton" onclick="removeRowFromTable('languageTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="text" name="languageRow" id="languageRow1" size="40" class="idleField"/></td>
+		 </tr>
+		</table>
+		
+		<table id="relationTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Relation<a href="http://dublincore.org/documents/usageguide/elements.shtml#relation" target="blank" class="superscript" tabindex="-1">?</a></td><td align="right"><a href="#relation" class="addremovebutton" onclick="addRowToTable('relation');" tabindex="-1">[+]</a><a href="#relation" class="addremovebutton" onclick="removeRowFromTable('relationTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="text" name="relationRow" id="relationRow1" size="40" class="idleField" /></td>
+		  </tr>
+		</table>
+		
+		<table id="coverageTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Coverage<a href="http://dublincore.org/documents/usageguide/elements.shtml#coverage" target="blank" class="superscript" tabindex="-1">?</a></td><td align="right"><a href="#coverage" class="addremovebutton" onclick="addRowToTable('coverage');" tabindex="-1">[+]</a><a href="#coverage" class="addremovebutton" onclick="removeRowFromTable('coverageTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="text" name="coverageRow" id="coverageRow1" size="40" class="idleField" /></td>
+		</tr>
+		</table>
+		
+		<table id="rightsTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Rights<a href="http://dublincore.org/documents/usageguide/elements.shtml#rights" target="blank" class="superscript" tabindex="-1">?</a></td><td align="right"><a href="#rights" class="addremovebutton" onclick="addRowToTable('rights');" tabindex="-1">[+]</a><a href="#rights" class="addremovebutton" onclick="removeRowFromTable('rightsTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="text" name="rightsRow" id="rightsRow1" size="40" class="idleField" /></td>
+		  </tr>
+		</table>
+		<br/>
+	  </div>
+	  </div>
+	  <div>&nbsp;</div>
+		<div class="centerbox">
+		<div class="boxheader">Output Options</div>
+		  <div class="boxtext" style="padding-left:10px;position:relative;" id="outputopts">
+		  <form action="save.php" method="post" />
+		    Display output as: <select id="outputType" name="outputType" onchange="showHideOutput();"><option value="xml">XML</option><option value="html">HTML</option><option value="xhtml">XHTML</option></select><br/>
+			  <div id="xmloptions" style="display:inline">
+			    <input type="checkbox" id="adddeclaration" class="checkbox" /><label>Include standard XML version/encoding declaration.</label><br/>
+			    <input type="checkbox" id="addroot" class="checkbox" /><label>Include root element and namespace.</label><br/>
+			      <div style="margin-left:20px"><label>Desired root element:</label> <input type="text" value="metadata" id="rootname" /></div>
+			    <input type="checkbox" id="adddc" class="checkbox" /><label>Include namespace reference for standard Dublin Core (DC Elements).</label><br/>
+			    <input type="checkbox" id="addqualified" class="checkbox" /><label>Include namespace reference for qualified Dublin Core (DC Terms).</label><br/>
+			  </div>
+			  <div id="htmloptions" style="display:none">
+			    <input type="checkbox" id="adddeclarationhtml" class="checkbox" /><label>Include a HTML version/encoding declaration (HTML 4.01 Strict) as well as the &lt;html&gt; and &lt;body&gt; tags.</label><br/>
+			    <input type="checkbox" id="addhead" class="checkbox" /><label>Include a &lt;head&gt; tag referencing DC-HTML.</label><br/>
+			    <input type="checkbox" id="addtitle" class="checkbox" /><label>Include a &lt;title&gt; tag.</label><br/>
+			      <div style="margin-left:20px"><label>Desired title:</label> <input type="text" value="metadata" id="titlename" /><br/></div>
+			    <input type="checkbox" id="addlink" class="checkbox" /><label>Include a &lt;link&gt; tag to the DC element set.</label><br/>
+			  </div>
+			  <div id="xhtmloptions" style="display:none">
+			    <input type="checkbox" id="adddeclarationxhtml" class="checkbox" /><label>Include XML and XHTML version/encoding declarations (XHTML 1.0 Strict) as well as the &lt;html&gt; and &lt;body&gt; tags.</label><br/>
+			    <input type="checkbox" id="addheadx" class="checkbox" /><label>Include a &lt;head&gt; tag referencing DC-HTML.</label><br/>
+			    <input type="checkbox" id="addtitlex" class="checkbox" /><label>Include a &lt;title&gt; tag.</label><br/>
+			      <div style="margin-left:20px"><label>Desired title:</label> <input type="text" value="metadata" id="titlenamex" /><br/></div>
+			    <input type="checkbox" id="addlinkx" class="checkbox" /><label>Include a &lt;link&gt; tag to the DC element set.</label><br/>
+			    <input type="checkbox" id="addlinkxqualified" class="checkbox" /><label>Include a &lt;link&gt; tag to the qualified DCTERMS element set.</label><br/>
+			  </div>
+			  <br/>
+			  <input type="button" value="Generate Metadata!" onclick="generateCode();" class="button" id="generatebutton"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="Reset Page" onclick="javascript:location.reload(true)" class="button" id="resetbutton" />
+		  </div>
+		</div>
+		<br/>
+		<div class="centerbox">
+		<div class="boxheader">Output</div>
+		<div class="boxtext" style="padding:10px;margin:auto;">
+		  <textarea rows="20" cols="114" name="xmlresults" id="xmlresults"></textarea>
+		  <textarea rows="20" cols="114" name="htmlresults" id="htmlresults" style="display:none"></textarea>
+		  <textarea rows="20" cols="114" name="xhtmlresults" id="xhtmlresults" style="display:none"></textarea>
+		  <br/><br/>
+		  <input type="submit" value="Save Generated Metadata to File" class="button" />
+		</div>
+		</div>
+		<br/>
+		<div class="lowerbox">
+		<div class="lowertext">
+		  <p><a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/3.0/80x15.png" height="15" width="80"/></a> The content on this site is released under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+		  <p>
+		  <!-- AddThis Button BEGIN -->
+		  <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pubid=ra-4d98b0b42d1454f1"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a>
+		  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4d98b0b42d1454f1"></script>
+		  <!-- AddThis Button END -->
+		  </p>
+		</div>
+		</div>
+		</div><!--End rightpage-->
+		</div><!--End page-->
+  </div><!--End container-->
+</body>
+</html>

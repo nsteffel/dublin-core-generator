@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /Steffel_cv.pdf
+Disallow: /testgen.html
+Disallow: /testgen2.html
+Disallow: /testgen3.html
+Allow: /

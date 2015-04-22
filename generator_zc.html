@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>The xZINECOREx Generator!</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<meta name="description" content="A generator for the xZINECOREx variation of Dublin Core." />
+	<meta name="google-site-verification" content="D-SyuAiarK1zPhnqWgDGWRTkeuD7AgfOJ396-G9wlds" />
+	
+	<!--Oh look, Dublin Core code!-->
+	<link rel="DC.Title" href="www.dublincoregenerator.com" />
+	<meta name="DC.Creator" content="Nick Steffel" />
+	<meta name="DC.Subject" scheme="DCTERMS.LCSH" content="Dublin Core" />
+	<meta name="DC.Description" content="dublincoregenerator.com is a free and easy to use set of online tools for generating XML or HTML Dublin Core metadata code." />
+	<meta name="DCTERMS.Created" scheme="DCTERMS.W3CTDF" content="2010-12-04" />
+	<meta name="DCTERMS.Modified" scheme="DCTERMS.W3CTDF" content="2012-10-16" />
+	<meta name="DC.Type" scheme="DCTERMS.DCMIType" content="InteractiveResource" />
+	<meta name="DC.Format" scheme="DCTERMS.IMT" content="application/xhtml+xml" />
+	<link rel="DC.Identifier" href="http://www.dublincoregenerator.com" />
+	<meta name="DC.Language" content="English" />
+	<meta name="DC.Language" scheme="DCTERMS.ISO639-3" content="eng" />
+	<link rel="DC.Rights" href="http://creativecommons.org/licenses/by-nc/3.0/" />
+	
+	<link rel="stylesheet" type="text/css" href="css/dcstyle.css"></link>
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.8.17.custom.css"></link>
+	<link rel="icon" href="/img/favicon.ico" type="image/x-icon"></link>
+	
+	<script type="text/javascript" src="js/generator_zc.js"></script>
+	<script type="text/javascript" src="js/interface_zc.js"></script>
+	<script type="text/javascript" src="js/analytics.js"></script>
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.anirows.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript">
+	$(function() {
+	$( "input:button, input:submit").button();
+	});
+	</script>
+</head>
+<body class="indexbody">
+  <div class="container">
+    <div class="header">dublincoregenerator.com - a better dublin core generator</div>
+    <ul id="newmenu">
+      <li><a href="index.html" title="Main Page">Main Page</a></li>
+	  <li><a href="generator_nq.html" title="Simple Dublin Core Generator">Simple Generator</a></li>
+	  <li><a href="generator.html" title="Advanced Dublin Core Generator">Advanced Generator</a></li>
+	  <li><a href="generator_zc.html" title="xZINECOREx Generator">xZINECOREx Generator</a></li>
+	  <li><a href="about.html" title="About">About</a></li>
+	  <li><a href="contribute.html" title="Contribute">Contribute</a></li>
+    </ul>
+	<div>&nbsp;</div>
+	  <div class="page">
+	  <div class="centerpage">
+	  <div class="centerbox">
+		<div class="boxheader">Directions</div>
+		<div class="boxtext">
+		  <ul class="directionslist">
+		  <li>Fill in the fields below and click on "Generate Code!" to convert your input into fully formed xZINECOREx metadata code. The code will be output in XML.</li>
+		  <li>If you need additional copies of a given field, click the plus sign to the upper-right of the tag's name to add an additional copy of it.</li>
+		  <li>Click the minus sign to delete any unneeded additional copies -- don't worry about removing tags you don't intend to use, the system will ignore any empty tags (and you can't delete the first row anyway).</li>
+		  <li>If you're unfamiliar with xZINECOREx, you may want to consult <a href="http://zinelibraries.info/2012/07/28/xzinecorex-union-catalog-update/" target="blank">this webpage</a> first.</li>
+		  </ul> 
+		</div>
+	  </div>
+	  &nbsp;
+	  <div class="centerbox" style="margin-right:200px">
+	  <div class="boxheader">Input</div>
+	  <div class="boxtext">
+	  &nbsp;
+		<table id="titleTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Title</td><td align="right"><a href="#title" class="addremovebutton" onclick="addRowToTable('title');" tabindex="-1">[+]</a><a href="#title" class="addremovebutton" onclick="removeRowFromTable('titleTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="text" name="titleRow" id="titleRow1" size="40" class="idleField" /></td>
+		  </tr>
+		</table>
+		
+		<table id="creatorTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Creator</td><td align="right"><a href="#creator" class="addremovebutton" onclick="addRowToTable('creator');" tabindex="-1">[+]</a><a href="#creator" class="addremovebutton" onclick="removeRowFromTable('creatorTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="text" name="creatorRow" id="creatorRow1" size="40" class="idleField"  /></td>
+		  </tr>
+		</table>
+		
+		<table id="subjectTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Subject</td><td align="right"><a href="#subject" class="addremovebutton" onclick="addRowToTable('subject');" tabindex="-1">[+]</a><a href="#subject" class="addremovebutton" onclick="removeRowFromTable('subjectTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="text" name="subjectRow" id="subjectRow1" size="40" class="idleField" /></td>
+		</tr>
+		</table>
+    
+    <table id="genreTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Genre</td><td align="right"><a href="#genre" class="addremovebutton" onclick="addRowToTable('genre');" tabindex="-1">[+]</a><a href="#genre" class="addremovebutton" onclick="removeRowFromTable('genreTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="text" name="genreRow" id="genreRow1" size="40" class="idleField" /></td>
+		</tr>
+		</table>
+		
+		<table id="descriptionTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Description</td><td align="right"><a href="#description" class="addremovebutton" onclick="addRowToTable('description');" tabindex="-1">[+]</a><a href="#description" class="addremovebutton" onclick="removeRowFromTable('descriptionTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><textarea rows="5" cols="50" name="descriptionRow" id="descriptionRow1" class="idleField"></textarea></td>
+		  </tr>
+		</table>
+    
+    <table id="abstractTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Abstract</td><td align="right"><a href="#abstract" class="addremovebutton" onclick="addRowToTable('abstract');" tabindex="-1">[+]</a><a href="#abstract" class="addremovebutton" onclick="removeRowFromTable('abstractTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><textarea rows="5" cols="50" name="abstractRow" id="abstractRow1" class="idleField"></textarea></td>
+		  </tr>
+		</table>
+    
+      <table id="contentsTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Table of Contents</td><td align="right"><a href="#contents" class="addremovebutton" onclick="addRowToTable('contents');" tabindex="-1">[+]</a><a href="#contents" class="addremovebutton" onclick="removeRowFromTable('contentsTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><textarea rows="5" cols="50" name="contentsRow" id="contentsRow1" class="idleField"></textarea></td>
+		  </tr>
+		</table>
+		
+		<table id="publisherTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Publisher</td><td align="right"><a href="#publisher" class="addremovebutton" onclick="addRowToTable('publisher');" tabindex="-1">[+]</a><a href="#publisher" class="addremovebutton" onclick="removeRowFromTable('publisherTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="text" name="publisherRow" id="publisherRow1" size="40" class="idleField" /></td>
+		  </tr>
+		</table>
+		
+		<table id="dateTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Date Created</td><td align="right"><a href="#date" class="addremovebutton" onclick="addRowToTable('date');" tabindex="-1">[+]</a><a href="#date" class="addremovebutton" onclick="removeRowFromTable('dateTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="text" name="dateRow" id="dateRow1" size="40" class="idleField" /></td>
+		 </tr>
+		</table>
+		
+		<table id="extentTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Extent</td><td align="right"><a href="#extent" class="addremovebutton" onclick="addRowToTable('extent');" tabindex="-1">[+]</a><a href="#extent" class="addremovebutton" onclick="removeRowFromTable('extentTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="text" name="extentRow" id="extentRow1" size="40" class="idleField" /></td>
+		  </tr>
+		</table>
+    
+    <table id="dimensionsTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Dimensions</td><td align="right"><a href="#dimensions" class="addremovebutton" onclick="addRowToTable('dimensions');" tabindex="-1">[+]</a><a href="#dimensions" class="addremovebutton" onclick="removeRowFromTable('dimensionsTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="text" name="dimensionsRow" id="dimensionsRow1" size="40" class="idleField" /></td>
+		  </tr>
+		</table>
+    
+    <table id="mediumTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Medium</td><td align="right"><a href="#medium" class="addremovebutton" onclick="addRowToTable('medium');" tabindex="-1">[+]</a><a href="#medium" class="addremovebutton" onclick="removeRowFromTable('mediumTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="text" name="mediumRow" id="mediumRow1" size="40" class="idleField" /></td>
+		  </tr>
+		</table>
+		
+		<table id="identifierTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Identifier</td><td align="right"><a href="#identifier" class="addremovebutton" onclick="addRowToTable('identifier');" tabindex="-1">[+]</a><a href="#identifier" class="addremovebutton" onclick="removeRowFromTable('identifierTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="text" name="identifierRow" id="identifierRow1" size="40" class="idleField" /></td>
+		</tr>
+		</table>
+		
+		<table id="languageTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Language</td><td align="right"><a href="#language" class="addremovebutton" onclick="addRowToTable('language');" tabindex="-1">[+]</a><a href="#language" class="addremovebutton" onclick="removeRowFromTable('languageTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="text" name="languageRow" id="languageRow1" size="40" class="idleField"/></td>
+		 </tr>
+		</table>
+    
+    <table id="collectionTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Collection</td><td align="right"><a href="#collection" class="addremovebutton" onclick="addRowToTable('collection');" tabindex="-1">[+]</a><a href="#collection" class="addremovebutton" onclick="removeRowFromTable('collectionTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="text" name="collectionRow" id="collectionRow1" size="40" class="idleField"/></td>
+		 </tr>
+		</table>
+    
+    <table id="volumeTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Volume</td><td align="right"><a href="#volume" class="addremovebutton" onclick="addRowToTable('volume');" tabindex="-1">[+]</a><a href="#volume" class="addremovebutton" onclick="removeRowFromTable('volumeTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="text" name="volumeRow" id="volumeRow1" size="40" class="idleField"/></td>
+		 </tr>
+		</table>
+    
+    <table id="issueTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Issue</td><td align="right"><a href="#issue" class="addremovebutton" onclick="addRowToTable('issue');" tabindex="-1">[+]</a><a href="#issue" class="addremovebutton" onclick="removeRowFromTable('issueTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="text" name="issueRow" id="issueRow1" size="40" class="idleField"/></td>
+		 </tr>
+		</table>
+		
+		<table id="coverageTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Place of Publication</td><td align="right"><a href="#coverage" class="addremovebutton" onclick="addRowToTable('coverage');" tabindex="-1">[+]</a><a href="#coverage" class="addremovebutton" onclick="removeRowFromTable('coverageTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="text" name="coverageRow" id="coverageRow1" size="40" class="idleField" /></td>
+		</tr>
+		</table>
+		
+		<table id="rightsTable" class="defaulttable">
+		  <tr>
+			<td class="titlerow">Rights Statement</td><td align="right"><a href="#rights" class="addremovebutton" onclick="addRowToTable('rights');" tabindex="-1">[+]</a><a href="#rights" class="addremovebutton" onclick="removeRowFromTable('rightsTable');" tabindex="-1">[-]</a></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><input type="text" name="rightsRow" id="rightsRow1" size="40" class="idleField" /></td>
+		  </tr>
+		</table>
+		<br/>
+		  <form action="save.php" method="post" />
+		  <input type="button" value="Generate Metadata!" onclick="generateCode();" class="button" id="generatebutton"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="Reset Page" onclick="javascript:location.reload(true)" class="button" id="resetbutton" />
+		  </div>
+		</div>
+		<br/>
+		<div class="centerbox">
+		<div class="boxheader">Output</div>
+		<div class="boxtext" style="padding:10px;margin:auto;">
+		  <textarea rows="20" cols="114" name="xmlresults" id="xmlresults"></textarea>
+		  <br/><br/>
+		  <input type="submit" value="Save Generated Metadata to File" class="button" />
+		</div>
+		</div>
+		<br/>
+		<div class="lowerbox">
+		<div class="lowertext">
+		  <p><a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/3.0/80x15.png" height="15" width="80"/></a> The content on this site is released under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+		  <p>
+		  <!-- AddThis Button BEGIN -->
+		  <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pubid=ra-4d98b0b42d1454f1"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a>
+		  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4d98b0b42d1454f1"></script>
+		  <!-- AddThis Button END -->
+		  </p>
+		</div>
+		</div>
+		</div><!--End rightpage-->
+		</div><!--End page-->
+  </div><!--End container-->
+</body>
+</html>
